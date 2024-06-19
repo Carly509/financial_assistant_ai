@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI Personal Finance Planner</title>
+  </head>
+  <body>
+    <h1>AI Personal Finance Planner 💰</h1>
+    <p>Manage your finances with AI Personal Finance Manager by creating personalized budgets, investment plans, and savings strategies using GPT-4o</p>
+
+    <form action="{{ url_for('generate_plan') }}" method="post">
+      <label for="openai_api_key">Enter OpenAI API Key:</label>
+      <input type="password" id="openai_api_key" name="openai_api_key" required>
+
+      <label for="serp_api_key">Enter Serp API Key:</label>
+      <input type="password" id="serp_api_key" name="serp_api_key" required>
+
+      <label for="financial_goals">Your Financial Goals:</label>
+      <textarea id="financial_goals" name="financial_goals" required></textarea>
+
+      <label for="current_situation">Your Current Financial Situation:</label>
+      <textarea id="current_situation" name="current_situation" required></textarea>
+
+      <button type="submit">Generate Financial Plan</button>
+    </form>
+
+    <div id="plan-result"></div>
+  </body>
+</html>
