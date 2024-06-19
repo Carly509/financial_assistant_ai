@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>AI Personal Finance Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <h1>AI Personal Finance Planner 💰</h1>
@@ -20,7 +21,7 @@
       <label for="current_situation">Your Current Financial Situation:</label>
       <textarea id="current_situation" name="current_situation" required></textarea>
 
-      <button type="submit">Generate Financial Plan</button>
+      <button type="submit" class="submit-btn">Generate Financial Plan</button>
     </form>
 
     <div id="plan-result"></div>
